@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styles.css';
 import React from 'react';
-import Helpers from './Helpers';
+import ToDoHelpers from './ToDoHelpers';
 import AddRemoveButtons from './AddRemoveButtons';
 import ToDoItem from './ToDoItem';
 
@@ -82,11 +82,10 @@ function ToDoList() {
               handleDeleteToDo={() => handleDeleteTodo(index)}
               key={index}
             />
-          )))
-         : <h2 className='empty-header'>You don't have any ToDo's. Press the button below to add one</h2>}
+          ))) : 
+          <h2 className='empty-header'>You don't have any ToDo's. Press the button below to add one</h2>}
           {toDos.length > 0 ? (
-            <Helpers
-              toggleAllChecked={toDos.some(toDo => toDo.completed)}
+            <ToDoHelpers
               handleRemoveAllToDos={handleDeleteAllToDos}
               handleToggleAllToDos={handleToggleAllToDos}
             />

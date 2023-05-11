@@ -96,6 +96,8 @@ p {
 .helpers-container {
   border-top: 1px solid rgb(217, 217, 217);
   padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .button-container {

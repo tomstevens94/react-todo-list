@@ -1,28 +1,25 @@
 import React from 'react';
 
 interface Props {
-  toggleAllChecked: boolean;
   handleToggleAllToDos: () => void;
   handleRemoveAllToDos: () => void;
 }
 
-const Helpers: React.FC<Props> = ({
-  toggleAllChecked,
+const ToDoHelpers: React.FC<Props> = ({
   handleToggleAllToDos,
   handleRemoveAllToDos
 }) => {
   return (
     <div className='list-item-container helpers-container'>
-      <input
-        onChange={handleToggleAllToDos}
-        checked={toggleAllChecked}
-        className='checkbox'
-        type='checkbox' 
-      />
-      <p>Toggle all</p>
+      <button 
+        onClick={handleToggleAllToDos}
+        className='secondary-button red'
+      >
+        Toggle all
+      </button>
       <button 
         onClick={handleRemoveAllToDos}
-        className='secondary-button'
+        className='secondary-button red'
       >
         Remove all
       </button>
@@ -30,4 +27,4 @@ const Helpers: React.FC<Props> = ({
   );
 }
 
-export default Helpers;
+export default ToDoHelpers;

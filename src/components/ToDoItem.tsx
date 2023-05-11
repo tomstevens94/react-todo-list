@@ -10,7 +10,6 @@ interface Props {
 }
 
 const ToDoItem: React.FC<Props> = ({
-  // ref,
   title,
   completed,
   handleCheckToDo,
